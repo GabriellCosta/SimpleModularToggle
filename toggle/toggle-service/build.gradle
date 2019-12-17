@@ -1,0 +1,21 @@
+import dependencies.Dependencies
+import dependencies.Modules
+
+apply plugin: "com.android.library"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+repositories {
+    maven { url RepositoriesUri.SAFE_ROOM }
+}
+
+dependencies {
+    implementation project(Modules.Toggle.CORE)
+
+    implementation Dependencies.Room.RUNTIME
+    implementation Dependencies.GSON
+    implementation Dependencies.RETROFIT
+    kapt Dependencies.Room.COMPILER
+    implementation Dependencies.SAFE_ROOM
+    implementation Dependencies.TIMBER
+}

@@ -1,2 +1,7 @@
 include ':app'
+
+include ':toggle:toggle-core'
+include ':toggle:toggle-runner'
+include ':toggle:toggle-service'
+
 rootProject.name='My Application'

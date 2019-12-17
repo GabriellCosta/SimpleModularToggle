@@ -1,0 +1,15 @@
+import dependencies.Dependencies
+import dependencies.Modules
+import dependencies.TestDependencies
+
+apply plugin: 'kotlin'
+
+dependencies {
+    api project(Modules.Toggle.CORE)
+
+    implementation Dependencies.KOTLIN
+    implementation Dependencies.Kodein.GENERIC
+
+    testImplementation TestDependencies.JUNIT
+    testImplementation TestDependencies.MOCKITO_KOTLIN
+}
